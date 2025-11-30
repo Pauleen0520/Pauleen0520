@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cordovan Glass Navbar with Icons</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Font: Lora -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay loop muted playsinline>
+    <source src="vid/vid.1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Moving Image Container -->
+  <div class="moving-container">
+    <img src="img/img.1.jfif" alt="Moving">
+    <img src="img/img.2.jfif" alt="Moving">
+    <img src="img/img.3.jfif" alt="Moving">
+    <img src="img/img.4.jfif" alt="Moving">
+    <img src="img/img.5.jfif" alt="Moving">
+    <img src="img/img.6.jfif" alt="Moving">
+    <img src="img/img.7.jfif" alt="Moving">
+    <img src="img/img.8.jfif" alt="Moving">
+    <img src="img/img.9.jfif" alt="Moving">
+    <img src="img/img.10.jfif" alt="Moving">
+    <img src="img/img.11.jfif" alt="Moving">
+    <img src="img/img.12.jfif" alt="Moving">
+    <img src="img/img.13.jfif" alt="Moving">
+    <img src="img/img.14.jfif" alt="Moving">
+    <img src="img/img.15.jfif" alt="Moving">
+    <img src="img/img.16.jfif" alt="Moving">
+    <img src="img/img.17.jfif" alt="Moving">
+    <img src="img/img.18.jfif" alt="Moving">
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html" data-title="Home"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="Memories.html" data-title="Memories"><i class="fa-solid fa-images"></i></a></li>
+      <li><a href="Message.html" data-title="Message"><i class="fa-solid fa-envelope"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- Play Sound Button -->
+  <button id="sound-btn"><i class="fa-solid fa-volume-high"></i></button>
+
+  <script>
+    const video = document.getElementById('bg-video');
+    const soundBtn = document.getElementById('sound-btn');
+
+    soundBtn.addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        soundBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+      } else {
+        video.muted = true;
+        soundBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+      }
+    });
+  </script>
+
+</body>
+</html>
