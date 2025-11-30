@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cordovan Glass Navbar with Icons</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Font: Lora -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" data-title="Home"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="Memories.html" data-title="Memories"><i class="fa-solid fa-images"></i></a></li>
+      <li><a href="Message.html" data-title="Message"><i class="fa-solid fa-envelope"></i></a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Top Baby Pink Container -->
+  <div class="container top-container">
+    Hello Ely & Jodi 💖
+  </div>
+
+  <!-- New Baby Pink Container Below -->
+  <div class="container bottom-container">
+    I miss you both. Click nio ket saan as in madaming taps. 
+  </div>
+
+  <script>
+    // When the user clicks or taps anywhere, create a heart
+    document.addEventListener('click', function(e) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '💖';
+      document.body.appendChild(heart);
+
+      // Set heart position to where user clicked
+      heart.style.left = e.pageX + 'px';
+      heart.style.top = e.pageY + 'px';
+
+      // Random rotation and size variation
+      heart.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+      heart.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
+
+      // Remove heart after animation
+      setTimeout(() => {
+        heart.remove();
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
