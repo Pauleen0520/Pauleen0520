@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Two-Toned Envelope with Navbar</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Font: Lora -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🌸 NAVIGATION BAR -->
+  <nav>
+    <ul>
+      <li><a href="index.html" data-title="Home"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="Memories.html" data-title="Memories"><i class="fa-solid fa-images"></i></a></li>
+      <li><a href="Message.html" data-title="Message"><i class="fa-solid fa-envelope"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- 💌 ENVELOPE -->
+  <div class="envelope-wrap" id="envelopeWrap">
+    <div class="envelope">
+      <div class="env-body"></div>
+      <div class="env-flap">
+        <span class="flap-shape"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAP BUTTON -->
+<a href="Mess.html"> <button class="tap-btn">💌 Pindutin niyo to</button>
+</a>
+
+
+  <script>
+    const envelopeWrap = document.getElementById('envelopeWrap');
+    const tapButton = document.getElementById('tapButton');
+
+    tapButton.addEventListener('click', () => {
+      envelopeWrap.classList.toggle('open');
+      tapButton.textContent = envelopeWrap.classList.contains('open') 
+         "💌 Tap Here";
+    });
+  </script>
+
+</body>
+</html>
